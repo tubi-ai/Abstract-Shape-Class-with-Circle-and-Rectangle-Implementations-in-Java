@@ -1,0 +1,25 @@
+package com.company;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    ArrayList <Shape> list = new ArrayList <Shape>();
+
+        list.add(new Circle(12,2,2));
+        list.add(new Circle(13,21,2));
+        list.add(new Circle(12,10,2));
+        list.add(new Circle(5,5,5));
+        list.add(new Circle(8,18,9));
+        list.add(new Rectangle(5,5,2,2));
+        list.add(new Rectangle(3,3,2,2));
+        list.add(new Rectangle(8,8,2,2));
+        list.add(new Rectangle(9,9,2,2));
+        list.add(new Rectangle(12,12,2,2));
+
+        for (Shape s : list) {
+            System.out.println( s.toString());
+        }
+    }
+}
