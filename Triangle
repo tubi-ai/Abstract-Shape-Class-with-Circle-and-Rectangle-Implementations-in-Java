@@ -1,0 +1,45 @@
+public class Triangle extends Shape {
+    double height,base;
+
+    public Triangle(double height, double base) {
+        this.height = height;
+        this.base = base;
+    }
+
+
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "height= " + String.format("%.2f", height) +
+                ", Base=" + String.format("%.2f", base) +
+                ", area=" + String.format("%.2f", calculateArea()) +
+                ", Circumference=" + String.format("%.2f", calculateCircumference()) +
+                '}';
+    }
+
+    @Override
+    public double calculateArea() {
+        return (this.height * this.base)/2.0;
+    }
+    @Override
+    public double calculateCircumference() {
+        return this.height + 2*this.base;
+    }
+}
